@@ -8,12 +8,12 @@ const app = express();
 require("dotenv").config();
 
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8092;
 
 app.use(cors());
 app.use(bodyParser.json());
 
-const URL = process.env.MONGODB_URL || 8092;
+const URL = process.env.MONGODB_URL ;
 
 mongoose.connect(URL, {
      useCreateIndex: true,
@@ -28,5 +28,5 @@ connection.once("open", () => {
 })
 
 app.listen(PORT, () =>{
-    console.log('Server is up and running in port no : ${PORT}');
+    console.log(`Server is up and running in port no : ${PORT}`);
 })
