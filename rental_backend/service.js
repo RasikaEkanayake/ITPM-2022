@@ -13,7 +13,7 @@ const PORT = process.env.PORT;
 app.use(cors());
 app.use(bodyParser.json());
 
-const URL = process.env.MONGODB_URL;
+const URL = process.env.MONGODB_URL || 8092;
 
 mongoose.connect(URL, {
      useCreateIndex: true,
@@ -28,5 +28,5 @@ connection.once("open", () => {
 })
 
 app.listen(PORT, () =>{
-    console.log('Server is up and running on port no: ${PORT}');
+    console.log('Server is up and running in port no : ${PORT}');
 })
