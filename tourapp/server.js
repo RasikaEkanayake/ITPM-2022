@@ -7,6 +7,7 @@ const app = express();
 
 //import routes
 const postRoutes = require('./routes/posts');
+const feedRoutes = require('./routes/feed');
 
 //use middleware
 app.use(bodyParser.json());
@@ -14,6 +15,7 @@ app.use(cors());
 
 //route middleware
 app.use(postRoutes);
+app.use(feedRoutes);
 
 const PORT = 8000;
 const DB_URL = 'mongodb+srv://rasika:Rasika123@cluster0.ws2c8.mongodb.net/tourDB?retryWrites=true&w=majority'

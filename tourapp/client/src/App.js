@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import UserDetails from './components/UserDetails'
 import EditProfile from './components/EditProfile';
 import Profile from './components/Profile';
+import Feedback from './client/Feedback';
 
 
 
@@ -20,6 +21,7 @@ export default class App extends Component {
           <Route path="/NewUser" component={NewUser}></Route>
           <Route path="/edit/:id" component={EditProfile}></Route>
           <Route path="/post/:id" component={UserDetails}></Route>
+          <Route path="/feed" component={Feedback}></Route>
         </div>
       </BrowserRouter>
     )

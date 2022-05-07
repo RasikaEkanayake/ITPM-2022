@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const feedSchema = new mongoose.Schema({
+const postSchema = new mongoose.Schema({
     feedback: {
         type: String,
         required: true
@@ -11,4 +11,4 @@ const feedSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('feed', feed)
+module.exports = mongoose.model('Feedback', postSchema)
