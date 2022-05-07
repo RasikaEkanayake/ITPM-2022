@@ -67,7 +67,7 @@ export default class Home extends Component {
                                             <div className="card-body">
                                                 <h5 className="card-title">Check Feedbacks</h5>
                                                 <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                                <a href="./newsuggestion" className="btn btn-primary">Go somewhere</a>
                                             </div>
                                         </div>
                                     </div>

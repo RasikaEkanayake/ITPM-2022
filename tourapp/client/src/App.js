@@ -20,10 +20,8 @@ export default class App extends Component {
           <Route path="/NewUser" component={NewUser}></Route>
           <Route path="/edit/:id" component={EditProfile}></Route>
           <Route path="/post/:id" component={UserDetails}></Route>
-
         </div>
       </BrowserRouter>
-
     )
   }
 }
