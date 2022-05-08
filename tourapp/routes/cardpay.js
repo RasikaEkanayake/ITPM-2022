@@ -20,7 +20,7 @@ router.post('/cardpay/save', (req, res) => {
 });
 
 
-//update paypal
+//update cardpay
 router.put('/cardpay/update/:id', (req, res) => {
     Cardpay.findByIdAndUpdate(
         req.params.id,
@@ -42,7 +42,7 @@ router.put('/cardpay/update/:id', (req, res) => {
     );
 });
 
-//get specific emails
+//get specific cardpay
 
 router.get("/cardpay/:id", (req, res) => {
     let postId = req.params.id;
@@ -55,7 +55,7 @@ router.get("/cardpay/:id", (req, res) => {
     });
 });
 
-//get emails
+//get cardpay
 router.get('/cardpay', (req, res) => {
     Cardpay.find().exec((err, cardpay) => {
         if (err) {

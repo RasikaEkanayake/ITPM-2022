@@ -13,6 +13,7 @@ import Editpaypal from './payment/Editpaypal';
 import Allemail from './payment/Allemail';
 import Payhome from './payment/Payhome';
 import Allcard from './payment/Allcard';
+import Editcardpay from './payment/Editcardpay';
 
 export default class App extends Component {
   render() {
@@ -29,7 +30,7 @@ export default class App extends Component {
           <Route path="/paypal" component={Addpaypal}></Route>
           <Route path="/cardpay" component={Addcard}></Route>
           <Route path="/uppaypal/:id" component={Editpaypal}></Route>
-          {/* <Route path="/upcardpay/:id" component={Allcard}></Route> */}
+          <Route path="/upcardpay/:id" component={Editcardpay}></Route>
           <Route path="/allemails" component={Allemail}></Route>
           <Route path="/allcard" component={Allcard}></Route>
           <Route path="/payhome" component={Payhome}></Route>

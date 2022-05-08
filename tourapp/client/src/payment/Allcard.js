@@ -9,29 +9,28 @@ export default class Allcard extends Component {
         this.state = {
             cardpay: []
         };
-
     }
 
     componentDidMount() {
-        this.retrievecardpay();
+        this.retrieveCardpay();
     }
 
-    retrievecardpay() {
+    retrieveCardpay() {
         axios.get("http://localhost:8000/cardpay").then(res => {
             if (res.data.success) {
-                this.setState({ cardpay: res.data.existingcardpay });
+                this.setState({ cardpay: res.data.existingCardpay });
 
                 console.log(this.state.cardpay)
             }
         });
     }
 
-    onDelete = (id) => {
-        axios.delete(`http://localhost:8000/cardpay/delete/${id}`).then((res) => {
-            alert("Deleted Successfully");
-        })
+    // onDelete = (id) => {
+    //     axios.delete(`http://localhost:8000/cardpay/delete/${id}`).then((res) => {
+    //         alert("Deleted Successfully");
+    //     })
 
-    }
+    // }
 
     render() {
         return (
@@ -40,7 +39,7 @@ export default class Allcard extends Component {
                     <tbody>
                         {this.state.cardpay.map((cardpay, index) => (
                             <tr key={index}>
-                                <th scope="row">{index + 1}</th>
+                                <th scope="row"></th>
 
                                 <div className="row">
 
@@ -51,8 +50,38 @@ export default class Allcard extends Component {
                                             </a>
                                         </div>
                                         <div className="row mt-3">
-                                            <div className="col-md-12"><label className="labels">email</label>
-                                                <input type="text" className="form-control" placeholder="" defaultValue={cardpay.email} />
+                                            <div className="col-md-12"><label className="labels"><h5>cardnumber</h5></label>
+                                                <input type="text" className="form-control" placeholder="" defaultValue={cardpay.cardnumber} />
+                                            </div>
+                                        </div>
+                                        <br></br>
+                                        <div className="row mt-3">
+                                            <div className="col-md-12"><label className="labels"><h5>month</h5></label>
+                                                <input type="text" className="form-control" placeholder="" defaultValue={cardpay.month} />
+                                            </div>
+                                        </div>
+                                        <br></br>
+                                        <div className="row mt-3">
+                                            <div className="col-md-12"><label className="labels"><h5>year</h5></label>
+                                                <input type="text" className="form-control" placeholder="" defaultValue={cardpay.year} />
+                                            </div>
+                                        </div>
+                                        <br></br>
+                                        <div className="row mt-3">
+                                            <div className="col-md-12"><label className="labels"><h5>cvv</h5></label>
+                                                <input type="text" className="form-control" placeholder="" defaultValue={cardpay.cvv} />
+                                            </div>
+                                        </div>
+                                        <br></br>
+                                        <div className="row mt-3">
+                                            <div className="col-md-12"><label className="labels "><h5>nameoncard</h5></label>
+                                                <input type="text" className="form-control" placeholder="" defaultValue={cardpay.nameoncard} />
+                                            </div>
+                                        </div>
+                                        <br></br>
+                                        <div className="row mt-3">
+                                            <div className="col-md-12"><label className="labels"><h5>phone</h5></label>
+                                                <input type="text" className="form-control" placeholder="" defaultValue={cardpay.phone} />
                                             </div>
                                         </div>
                                         <br></br>
