@@ -14,6 +14,12 @@ import Allemail from './payment/Allemail';
 import Payhome from './payment/Payhome';
 import Allcard from './payment/Allcard';
 import Editcardpay from './payment/Editcardpay';
+import BookRoom from './components/Bookroom';
+import GCreatePost from './guids/CreatePost';
+import GEditPost from './guids/EditPost';
+import GPostDetails from './guids/PostDetails';
+import Ghome from './guids/Home';
+
 
 export default class App extends Component {
   render() {
@@ -34,6 +40,11 @@ export default class App extends Component {
           <Route path="/allemails" component={Allemail}></Route>
           <Route path="/allcard" component={Allcard}></Route>
           <Route path="/payhome" component={Payhome}></Route>
+          <Route path="/bookroom" component={BookRoom}></Route>
+          <Route path="/gadd" component={GCreatePost}></Route>
+          <Route path="/gedit/:id" component={GEditPost}></Route>
+          <Route path="/gpost/:id" component={GPostDetails}></Route>
+          <Route path="/ghome" component={Ghome}></Route>
         </div>
       </BrowserRouter>
     )

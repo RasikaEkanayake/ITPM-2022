@@ -23,9 +23,9 @@ export default class Home extends Component {
                                     <div className="col-sm-6">
                                         <div className="card">
                                             <div className="card-body">
-                                                <h5 className="card-title">Book Guids</h5>
+                                                <h5 className="card-title">Manage Guids</h5>
                                                 <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                <a href="paypal" className="btn btn-primary">Book Now</a>
+                                                <a href="/ghome" className="btn btn-primary">Book Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -34,7 +34,7 @@ export default class Home extends Component {
                                             <div className="card-body">
                                                 <h5 className="card-title">Book Rooms</h5>
                                                 <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                <a href="/paypals" className="btn btn-primary">Book Now</a>
+                                                <a href="/bookroom" className="btn btn-primary">Book Now</a>
                                             </div>
                                         </div>
                                     </div>

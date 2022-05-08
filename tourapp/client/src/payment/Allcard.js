@@ -19,7 +19,6 @@ export default class Allcard extends Component {
         axios.get("http://localhost:8000/cardpay").then(res => {
             if (res.data.success) {
                 this.setState({ cardpay: res.data.existingCardpay });
-
                 console.log(this.state.cardpay)
             }
         });

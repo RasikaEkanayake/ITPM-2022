@@ -3,31 +3,24 @@ const mongoose = require('mongoose');
 const postSchema = new mongoose.Schema({
     packageName: {
         type: String,
-        required: true,
-        min: 3,
-        max: 255,
+        required: true
     },
     packageId: {
         type: String,
-        required: true,
-        min: 3,
-        max: 255,
+        required: true
     },
     price: {
         type: Number,
-        required: true,
-        min: 0,
+        required: true
     },
     discount: {
         type: Number,
-        required: true,
-        min: 0,
-        max: 100,
+        required: true
     },
     description: {
         type: String,
-        required: true,
-        min: 6,
+        required: true
+
     }
 });
 
