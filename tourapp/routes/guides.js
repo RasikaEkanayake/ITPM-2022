@@ -1,22 +1,22 @@
 const express = require('express');
-const Posts = require('../models/guide');
+const Guids = require('../models/guide');
 
 const router = express.Router();
 
 //save posts
 
-router.post('/gpost/save', (req, res) => {
+router.post('/guids/save', (req, res) => {
 
-    let newPost = new Posts(req.body);
+    let newGuids = new Guids(req.body);
 
-    newPost.save((err) => {
+    newGuids.save((err) => {
         if (err) {
             return res.status(400).json({
-                error: err
+                alert: "feedback record unsuccessfull", err
             });
         }
         return res.status(200).json({
-            success: "Posts saved succesfully"
+            success: "Employee saved succesfully"
         });
     });
 
@@ -24,8 +24,8 @@ router.post('/gpost/save', (req, res) => {
 
 //get posts
 
-router.get('/gposts', (req, res) => {
-    Posts.find().exec((err, posts) => {
+router.get('/guids', (req, res) => {
+    Guids.find().exec((err, guids) => {
         if (err) {
             return res.status(400).json({
                 error: err
@@ -33,7 +33,7 @@ router.get('/gposts', (req, res) => {
         }
         return res.status(200).json({
             success: true,
-            existingPosts: posts
+            existingGuids: guids
         });
     });
 });
@@ -41,11 +41,11 @@ router.get('/gposts', (req, res) => {
 
 //get a specific post
 
-router.get("/gpost/:id", (req, res) => {
+router.get("/guids/:id", (req, res) => {
 
     let postId = req.params.id;
 
-    Posts.findById(postId, (err, post) => {
+    Guids.findById(postId, (err, post) => {
         if (err) {
             return res.status(400).json({ success: false, err });
         }
@@ -63,7 +63,7 @@ router.get("/gpost/:id", (req, res) => {
 
 
 //update posts
-router.put('/gpost/update/:id', (req, res) => {
+router.put('/guids/update/:id', (req, res) => {
     Posts.findByIdAndUpdate(
         req.params.id,
         {
@@ -82,8 +82,8 @@ router.put('/gpost/update/:id', (req, res) => {
 
 // delete post
 
-router.delete('/gpost/delete/:id', (req, res) => {
-    Posts.findByIdAndRemove(req.params.id).exec((err, deletePost) => {
+router.delete('/guids/delete/:id', (req, res) => {
+    Guids.findByIdAndRemove(req.params.id).exec((err, deletePost) => {
         if (err) return res.status(400).json({
             message: "Delete unsuccessfull", err
         });

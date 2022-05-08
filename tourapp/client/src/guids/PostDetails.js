@@ -14,7 +14,7 @@ export default class PostDetails extends Component {
 
         const id = this.props.match.params.id;
 
-        axios.get(`/gpost/${id}`).then((res) => {
+        axios.get(`/post/${id}`).then((res) => {
             if (res.data.success) {
                 this.setState({
                     post: res.data.post

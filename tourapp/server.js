@@ -11,7 +11,7 @@ const feedRoutes = require('./routes/feed');
 const paypalRoutes = require('./routes/paypal');
 const cardpayRoutes = require('./routes/cardpay');
 const packagesRoutes = require('./routes/packages');
-const guideRoutes = require('./routes/guide');
+const guideRoutes = require('./routes/guides');
 
 //use middleware
 app.use(bodyParser.json());

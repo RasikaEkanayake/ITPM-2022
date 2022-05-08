@@ -14,7 +14,7 @@ router.post('/paypal/save', (req, res) => {
             });
         }
         return res.status(200).json({
-            success: "feedback saved Succesfully"
+            success: "Payment saved Succesfully"
         });
     });
 

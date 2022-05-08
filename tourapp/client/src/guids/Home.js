@@ -6,24 +6,24 @@ export default class Home extends Component {
         super(props);
 
         this.state = {
-            posts: []
+            guids: []
         };
     }
 
 
 
     componentDidMount() {
-        this.retrievePosts();
+        this.retrieveguids();
     }
 
-    retrievePosts() {
-        axios.get("/gposts").then(res => {
+    retrieveguids() {
+        axios.get("/guids").then(res => {
             if (res.data.success) {
                 this.setState({
-                    posts: res.data.existingPosts
+                    guids: res.data.existingGuids
                 });
 
-                console.log(this.state.posts);
+                console.log(this.state.guids);
             }
 
 
@@ -32,20 +32,20 @@ export default class Home extends Component {
 
 
     onDelete = (id) => {
-        axios.delete(`/gpost/delete/${id}`).then((res) => {
+        axios.delete(`/guids/delete/${id}`).then((res) => {
             alert("Deleted Successfully");
-            this.retrievePosts();
+            this.retrieveguids();
         })
 
     }
 
-    filterData(posts, searchKey) {
+    filterData(guids, searchKey) {
 
-        const result = posts.filter((post) =>
+        const result = guids.filter((post) =>
             post.topic.includes(searchKey)
         )
 
-        this.setState({ posts: result })
+        this.setState({ guids: result })
 
     }
 
@@ -54,10 +54,10 @@ export default class Home extends Component {
 
         const searchKey = e.currentTarget.value;
 
-        axios.get("/gposts").then(res => {
+        axios.get("/guids").then(res => {
             if (res.data.success) {
 
-                this.filterData(res.data.existingPosts, searchKey)
+                this.filterData(res.data.existingGuids, searchKey)
             }
         });
 
@@ -96,25 +96,25 @@ export default class Home extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.posts.map((posts, index) => (
+                        {this.state.guids.map((guids, index) => (
                             <tr key={index}>
                                 <th scope="row">{index + 1}</th>
                                 <td>
-                                    <a href={`/gpost/${posts._id}`} style={{ textDecoration: 'none' }}>
-                                        {posts.name}
+                                    <a href={`/post/${guids._id}`} style={{ textDecoration: 'none' }}>
+                                        {guids.name}
                                     </a>
                                 </td>
-                                <td>{posts.dob}</td>
-                                <td>{posts.nic}</td>
-                                <td>{posts.address}</td>
-                                <td>{posts.contactNumber}</td>
-                                <td>{posts.imageURL}</td>
+                                <td>{guids.dob}</td>
+                                <td>{guids.nic}</td>
+                                <td>{guids.address}</td>
+                                <td>{guids.contactNumber}</td>
+                                <td>{guids.imageURL}</td>
                                 <td>
-                                    <a className="btn btn-warning" href={`/edit/${posts._id}`}>
+                                    <a className="btn btn-warning" href={`/edit/${guids._id}`}>
                                         <i className="fas fa-edit"></i>&nbsp;Edit
                                     </a>
                                     &nbsp;
-                                    <a className="btn btn-danger" href="#" onClick={() => this.onDelete(posts._id)}>
+                                    <a className="btn btn-danger" href="#" onClick={() => this.onDelete(guids._id)}>
                                         <i className="far fa-trash-alt"></i>&nbsp;Delete
                                     </a>
                                 </td>

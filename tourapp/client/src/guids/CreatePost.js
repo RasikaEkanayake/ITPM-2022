@@ -42,8 +42,9 @@ export default class CreatePost extends Component {
 
         console.log(data)
 
-        axios.post("/gpost/save", data).then((res) => {
+        axios.post(`http://localhost:8000/guids/save`, data).then((res) => {
             if (res.data.success) {
+                alert("Added successfully")
                 this.setState(
                     {
                         name: "",
@@ -54,6 +55,9 @@ export default class CreatePost extends Component {
                         imageURL: ""
                     }
                 )
+            }
+            else {
+                alert("Failed to add")
             }
         })
 
@@ -86,7 +90,6 @@ export default class CreatePost extends Component {
                             value={this.state.dob}
                             onChange={this.handleInputChange} />
                     </div>
-
 
                     <div className="form-group" style={{ marginBottom: '15px' }}>
                         <label style={{ marginBottom: '5px' }}>NIC</label>
