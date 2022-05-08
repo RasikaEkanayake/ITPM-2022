@@ -25,7 +25,7 @@ export default class Home extends Component {
                                             <div className="card-body">
                                                 <h5 className="card-title">Book Guids</h5>
                                                 <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                <a href="#" className="btn btn-primary">Book Now</a>
+                                                <a href="paypal" className="btn btn-primary">Book Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -34,7 +34,7 @@ export default class Home extends Component {
                                             <div className="card-body">
                                                 <h5 className="card-title">Book Rooms</h5>
                                                 <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                <a href="#" className="btn btn-primary">Book Now</a>
+                                                <a href="/paypals" className="btn btn-primary">Book Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -46,7 +46,7 @@ export default class Home extends Component {
                                             <div className="card-body">
                                                 <h5 className="card-title">Contact us</h5>
                                                 <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                <a href="#" className="btn btn-primary">Contact now</a>
+                                                <a href="/payhome" className="btn btn-primary">Contact now</a>
                                             </div>
                                         </div>
                                     </div>
