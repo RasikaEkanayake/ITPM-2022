@@ -13,11 +13,11 @@ export default class Home extends Component {
 
 
     componentDidMount() {
-        this.retrieveguids();
+        this.retrieveGuids();
     }
 
-    retrieveguids() {
-        axios.get("/guids").then(res => {
+    retrieveGuids() {
+        axios.get("http://localhost:8000/guids").then(res => {
             if (res.data.success) {
                 this.setState({
                     guids: res.data.existingGuids
@@ -32,7 +32,7 @@ export default class Home extends Component {
 
 
     onDelete = (id) => {
-        axios.delete(`/guids/delete/${id}`).then((res) => {
+        axios.delete(`http://localhost:8000/guids/delete/${id}`).then((res) => {
             alert("Deleted Successfully");
             this.retrieveguids();
         })
@@ -54,7 +54,7 @@ export default class Home extends Component {
 
         const searchKey = e.currentTarget.value;
 
-        axios.get("/guids").then(res => {
+        axios.get("http://localhost:8000/guids").then(res => {
             if (res.data.success) {
 
                 this.filterData(res.data.existingGuids, searchKey)

@@ -41,22 +41,16 @@ router.get('/guids', (req, res) => {
 
 //get a specific post
 
-router.get("/guids/:id", (req, res) => {
 
+router.get("/guids/:id", (req, res) => {
     let postId = req.params.id;
 
-    Guids.findById(postId, (err, post) => {
+    Guids.findById(postId).exec((err, post) => {
         if (err) {
             return res.status(400).json({ success: false, err });
         }
-
-        return res.status(200).json({
-            success: true,
-            post
-        });
+        return res.status(200).json({ success: true, post })
     });
-
-
 });
 
 

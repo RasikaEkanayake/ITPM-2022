@@ -42,7 +42,7 @@ export default class EditPost extends Component {
 
         console.log(data)
 
-        axios.put(`/guids/update/${id}`, data).then((res) => {
+        axios.put(`http://localhost:8000/guids/update/${id}`, data).then((res) => {
             if (res.data.success) {
                 alert("Post Updated Successfully")
                 this.setState(
@@ -67,7 +67,7 @@ export default class EditPost extends Component {
 
         const id = this.props.match.params.id;
 
-        axios.get(`/guids/${id}`).then((res) => {
+        axios.get(`http://localhost:8000/guids/${id}`).then((res) => {
             if (res.data.success) {
                 this.setState({
                     name: res.data.post.name,
