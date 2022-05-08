@@ -10,11 +10,11 @@ router.post('/cardpay/save', (req, res) => {
     newCardpay.save((err) => {
         if (err) {
             return res.status(400).json({
-                alert: "feedback record unsuccessfull", err
+                alert: "Cardpay record unsuccessfull", err
             });
         }
         return res.status(200).json({
-            success: "feedback saved Succesfully"
+            success: "Cardpay saved Succesfully"
         });
     });
 });
@@ -31,12 +31,12 @@ router.put('/cardpay/update/:id', (req, res) => {
             if (err) {
                 return res.status(400).json({
                     error: err,
-                    message: "Update unsuccessfull", err
+                    message: "Cardpay Update unsuccessfull", err
                 });
 
             }
             return res.status(200).json({
-                success: "Update successfully"
+                success: "Cardpay Update successfully"
             });
         }
     );

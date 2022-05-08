@@ -41,7 +41,6 @@ router.get('/guids', (req, res) => {
 
 //get a specific post
 
-
 router.get("/guids/:id", (req, res) => {
     let postId = req.params.id;
 
@@ -52,8 +51,6 @@ router.get("/guids/:id", (req, res) => {
         return res.status(200).json({ success: true, post })
     });
 });
-
-
 
 
 //update posts
