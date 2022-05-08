@@ -49,7 +49,6 @@ export default class Home extends Component {
 
     }
 
-
     handleSearchArea = (e) => {
 
         const searchKey = e.currentTarget.value;
@@ -116,6 +115,10 @@ export default class Home extends Component {
                                     &nbsp;
                                     <a className="btn btn-danger" href="#" onClick={() => this.onDelete(guids._id)}>
                                         <i className="far fa-trash-alt"></i>&nbsp;Delete
+                                    </a>
+                                    &nbsp;
+                                    <a className="btn btn-primary" href="/guidesal" onClick={() => this.onDelete(guids._id)}>
+                                        <i className="far fa-trash-alt"></i>&nbsp;Manage Salary
                                     </a>
                                 </td>
 

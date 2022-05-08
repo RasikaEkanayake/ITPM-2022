@@ -24,8 +24,8 @@ export default class Home extends Component {
                                         <div className="card">
                                             <div className="card-body">
                                                 <h5 className="card-title">Manage Guids</h5>
-                                                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                <a href="/ghome" className="btn btn-primary">Book Now</a>
+                                                <p className="card-text">Manage Guids in system.</p>
+                                                <a href="/ghome" className="btn btn-primary">Mange guids</a>
                                             </div>
                                         </div>
                                     </div>
@@ -33,8 +33,8 @@ export default class Home extends Component {
                                         <div className="card">
                                             <div className="card-body">
                                                 <h5 className="card-title">Book Rooms</h5>
-                                                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                <a href="/bookroom" className="btn btn-primary">Book Now</a>
+                                                <p className="card-text">View Book Rooms Function as a User</p>
+                                                <a href="/bookroom" className="btn btn-success">View User Demo</a>
                                             </div>
                                         </div>
                                     </div>
@@ -44,9 +44,9 @@ export default class Home extends Component {
                                     <div className="col-sm-6">
                                         <div className="card">
                                             <div className="card-body">
-                                                <h5 className="card-title">Contact us</h5>
-                                                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                <a href="/payhome" className="btn btn-primary">Contact now</a>
+                                                <h5 className="card-title">About Us</h5>
+                                                <p className="card-text">Check Who we are</p>
+                                                <a href="/payhome" className="btn btn-info">About now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -54,8 +54,8 @@ export default class Home extends Component {
                                         <div className="card">
                                             <div className="card-body">
                                                 <h5 className="card-title">Create User</h5>
-                                                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                <a href="./NewUser" className="btn btn-primary">Click here</a>
+                                                <p className="card-text">Create New User</p>
+                                                <a href="./NewUser" className="btn btn-primary">Create User</a>
                                             </div>
                                         </div>
                                     </div>
@@ -74,8 +74,8 @@ export default class Home extends Component {
                                     <div className="col-sm-6">
                                         <div className="card">
                                             <div className="card-body">
-                                                <h5 className="card-title">Manage Profile</h5>
-                                                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                <h5 className="card-title">Manage Users</h5>
+                                                <p className="card-text">Manage users in Elite Tourism.</p>
                                                 <a href="./Profile" className="btn btn-primary">Click here</a>
                                             </div>
                                         </div>

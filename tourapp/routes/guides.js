@@ -58,7 +58,7 @@ router.get("/guids/:id", (req, res) => {
 
 //update posts
 router.put('/guids/update/:id', (req, res) => {
-    Posts.findByIdAndUpdate(
+    Guids.findByIdAndUpdate(
         req.params.id,
         {
             $set: req.body

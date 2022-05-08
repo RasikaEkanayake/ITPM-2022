@@ -41,9 +41,7 @@ export default class Allemail extends Component {
                         {this.state.paypal.map((paypal, index) => (
                             <tr key={index}>
                                 <th scope="row">{index + 1}</th>
-
                                 <div className="row">
-
                                     <div className="p-3 py-5">
                                         <div className="d-flex justify-content-between align-items-center mb-3">
                                             <a href={`/uppaypal/${paypal._id}`} style={{ textDecoration: 'none' }}>

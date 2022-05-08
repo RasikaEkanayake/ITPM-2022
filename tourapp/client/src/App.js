@@ -19,6 +19,7 @@ import GCreatePost from './guids/CreatePost';
 import GEditPost from './guids/EditPost';
 import GPostDetails from './guids/PostDetails';
 import Ghome from './guids/Home';
+import Guidesal from './guids/Guidesal';
 
 
 export default class App extends Component {
@@ -45,6 +46,7 @@ export default class App extends Component {
           <Route path="/gedit/:id" component={GEditPost}></Route>
           <Route path="/gpost/:id" component={GPostDetails}></Route>
           <Route path="/ghome" component={Ghome}></Route>
+          <Route path="/sgedit/:id" component={Guidesal}></Route>
         </div>
       </BrowserRouter>
     )
