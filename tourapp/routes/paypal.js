@@ -10,7 +10,7 @@ router.post('/paypal/save', (req, res) => {
     newPaypal.save((err) => {
         if (err) {
             return res.status(400).json({
-                alert: "feedback record unsuccessfull", err
+                alert: "Payment record unsuccessfull", err
             });
         }
         return res.status(200).json({
@@ -33,12 +33,12 @@ router.put('/paypal/update/:id', (req, res) => {
             if (err) {
                 return res.status(400).json({
                     error: err,
-                    message: "Update unsuccessfull", err
+                    message: "Payment Update unsuccessfull", err
                 });
 
             }
             return res.status(200).json({
-                success: "Update successfully"
+                success: "Payment Update successfully"
             });
         }
     );
@@ -77,10 +77,10 @@ router.get('/paypal', (req, res) => {
 router.delete('/paypal/delete/:id', (req, res) => {
     Paypal.findByIdAndRemove(req.params.id).exec((err, deletePost) => {
         if (err) return res.status(400).json({
-            message: "Delete unsuccessfull", err
+            message: "Payment Delete unsuccessfull", err
         });
         return res.json({
-            message: "Delete successfull", deletePost
+            message: "Payment Delete successfull", deletePost
         });
     });
 });
